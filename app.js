@@ -41,7 +41,7 @@ function win(userChoice, computerChoice){
 
 function lose(userChoice, computerChoice){
     const smallUserWord = " user".fontsize(13);
-    const smallCompWord = " comp".fontsize(13)();
+    const smallCompWord = " comp".fontsize(13);
     const userChoice_div = document.getElementById(userChoice);
     computerScore++;
     userScore_span.innerHTML = userScore;
