@@ -19,20 +19,21 @@ function getComputerChoice(){
 }
 
 function convertToWord(letter){
-    if (letter === "r") return "Rock";
-    if (letter === "p") return "Paper";
-    return "Scissors";
+    if (letter === "r") return "rock";
+    if (letter === "p") return "paper";
+    return "scissors";
 
 }
 
 function win(userChoice, computerChoice){
-    const smallUserWord = " user".fontsize(13);
-    const smallCompWord = " comp".fontsize(13);
+    const smallUserWord = " your ";
+    const smallCompWord = " computers ";
     const userChoice_div = document.getElementById(userChoice);
     userScore++;
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
-    result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} beats ${convertToWord(computerChoice)}${smallCompWord} you win `;
+    result_p.innerHTML = `${smallUserWord}${convertToWord(userChoice)} beats ${smallCompWord}${convertToWord(computerChoice)} 
+    <br><br> YOU WIN `;
     userChoice_div.classList.add('green-glow');
     setTimeout(() => userChoice_div.classList.remove('green-glow'), 1000);
 
@@ -40,22 +41,24 @@ function win(userChoice, computerChoice){
 
 
 function lose(userChoice, computerChoice){
-    const smallUserWord = " user".fontsize(13);
-    const smallCompWord = " comp".fontsize(13);
+    const smallUserWord = " your ";
+    const smallCompWord = " computers ";
     const userChoice_div = document.getElementById(userChoice);
     computerScore++;
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
-    result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} beats ${convertToWord(computerChoice)}${smallCompWord} you lose `;
+    result_p.innerHTML = `${smallCompWord}${convertToWord(computerChoice)} beats ${smallUserWord}${convertToWord(userChoice)} 
+    <br><br> YOU LOSE `;
     userChoice_div.classList.add('red-glow');
     setTimeout(() => userChoice_div.classList.remove('red-glow'), 1000);
 }
 
 function draw(userChoice, computerChoice){
-    const smallUserWord = " user".fontsize(13);
-    const smallCompWord = " comp".fontsize(13);
+    const smallUserWord = " your ";
+    const smallCompWord = " computers ";
     const userChoice_div = document.getElementById(userChoice);
-    result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} equals ${convertToWord(computerChoice)}${smallCompWord} draw `;
+    result_p.innerHTML = `${smallUserWord}${convertToWord(userChoice)} equals ${smallCompWord}${convertToWord(computerChoice)} 
+    <br><br> DRAW    `;
     userChoice_div.classList.add('gray-glow');
     setTimeout(() => userChoice_div.classList.remove('gray-glow'), 1000);
 }

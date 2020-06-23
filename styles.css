@@ -6,31 +6,31 @@
 }
 
 body {
-    background-color: #3a4157;
+    background-color: #63384e;
 }
 
 header {
-    background: white;
+    background: #bdffcf;
     padding: 20px;
 
 }
 
 
-
 header > h1 {
-    color: #3a4157;
+    color: #63384e;
     text-align: center;
     font-family: sans-serif;
-    
+    font-weight: bold;
+    font-size: 48px;
 }
 
 .score-board {
     margin: 20px auto;
-    border: 3px solid white;
+    border: 3px solid #bdffcf;
     border-radius: 4px;
     text-align: center;
     width: 200px;
-    color: white;
+    color:#bdffcf;
     font-size: 46px;
     padding: 15px 20px;
     font-family: sans-serif;
@@ -62,7 +62,7 @@ header > h1 {
 
 .result {
     font-size: 40px;
-    color: white;
+    color: #bdffcf;
 
 
 }
@@ -80,7 +80,7 @@ header > h1 {
 
 
 .choice {
-    border: 4px solid white;
+    border: 4px solid#bdffcf;
     border-radius: 50%;
     margin: 0 20px;
     padding: 50px;
@@ -95,7 +95,7 @@ header > h1 {
 
 #action-message {
     text-align: center;
-    color: white;
+    color: #bdffcf;
     font-family: sans-serif;
     font-weight: bold;
     font-size: 20px;
